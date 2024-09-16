@@ -1,0 +1,38 @@
+[
+    {
+        "model": "myapp.Employee",
+        "pk": 1,
+        "fields": {
+            "name": "Jhon",
+            "address": "Mirpur, Dhaka",
+            "phone": "01500000000",
+            "salary": "200000",
+            "designation": "Development Manager(web)",
+            "short_description": "He is a very good full stack web Developer"
+        }
+    },
+    {
+        "model": "myapp.Employee",
+        "pk": 2,
+        "fields": {
+            "name": "Jayed",
+            "address": "Dhanmondi, Dhaka",
+            "phone": "01500000011",
+            "salary": "150000",
+            "designation": "Senior Developer",
+            "short_description": "He is well known full stack web Developer"
+        }
+    },
+    {
+        "model": "myapp.Employee",
+        "pk": 3,
+        "fields": {
+            "name": "Akash",
+            "address": "Mirpur-2, Dhaka",
+            "phone": "01500001111",
+            "salary": "50000",
+            "designation": "Junior Developer",
+            "short_description": "He is a young back-end web Developer"
+        }
+    }
+]

@@ -1,0 +1,15 @@
+{%extends "layout.html"%}
+
+{%block allemployes%}
+      {%for employee in employes%}
+      <div class="card m-2" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{employee.name}}</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">{{employee.designation}}</h6>
+          <p class="card-text">{{employee.short_description}}</p>
+          <a href="#" class="card-link text-success-subtle bolder text-decoration-none">Update</a>
+          <a href="{%url "delete_em" employee.pk%}" class="card-link text-danger bolder text-decoration-none">Delete</a>
+        </div>
+      </div>
+      {%endfor%}
+{%endblock%}
