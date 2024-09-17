@@ -1,5 +1,11 @@
 {%extends "layout.html"%}
 
+{%block nav%}
+<nav class="navbar navbar-expand-lg bg-primary-subtle">
+  {%include "partials/nav.html"%}
+</nav>
+{%endblock%}
+
 {%block allemployes%}
       {%for employee in employes%}
       <div class="card m-2" style="width: 18rem;">
@@ -7,9 +13,15 @@
           <h5 class="card-title">{{employee.name}}</h5>
           <h6 class="card-subtitle mb-2 text-body-secondary">{{employee.designation}}</h6>
           <p class="card-text">{{employee.short_description}}</p>
-          <a href="#" class="card-link text-success-subtle bolder text-decoration-none">Update</a>
+
+          <!-- Delete & Update -->
+          <a href="{%url "update_emp" employee.pk%}" class="card-link text-success-subtle bolder text-decoration-none">Update</a>
           <a href="{%url "delete_em" employee.pk%}" class="card-link text-danger bolder text-decoration-none">Delete</a>
         </div>
       </div>
       {%endfor%}
+{%endblock%}
+
+{%block title%}
+Home page
 {%endblock%}
