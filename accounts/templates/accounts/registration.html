@@ -1,0 +1,14 @@
+{%extends "layout.html"%}
+
+{%block reg%}
+   <h2>Registration</h2>
+   <form method="post" class="bg-secondary text-white pe-auto">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit">Registration</button>
+   </form>
+{%endblock%}
+
+{%block title%}
+Register
+{%endblock%}

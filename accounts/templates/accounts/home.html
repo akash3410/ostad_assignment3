@@ -1,0 +1,14 @@
+{%extends "layout.html"%}
+
+{%block account_home%}
+{{request.user}}
+<div>
+    {%for employee in employes%}
+        {% if employee.name == request.user %}
+        <p>xx{{employee.name}}</p>
+        {%else%}
+        <p>aaaaaa</p>
+        {% endif %}
+    {% endfor %}
+</div>
+{%endblock%}

@@ -24,5 +24,6 @@ def initial_load(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', initial_load),
-    path('app/', include("myapp.urls"))
+    path('app/', include("myapp.urls")),
+    path('account/', include("accounts.urls"))
 ]
